@@ -314,13 +314,6 @@
   var seasonOverlay = document.getElementById('season-overlay');
   var seasonCycleIndex = 0;
 
-  function monthDefaultSeason() {
-    var month = new Date().getMonth(); // 0 = January
-    if (month === 9) return 'halloween'; // October
-    if (month === 11) return 'christmas'; // December
-    return 'none';
-  }
-
   function getStoredSeason() {
     var stored = readStored(SEASON_KEY);
     if (SEASON_VALUES.indexOf(stored) !== -1) return stored;
